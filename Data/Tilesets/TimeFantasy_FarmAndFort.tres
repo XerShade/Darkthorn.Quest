@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" format=3 uid="uid://ck40rhnrjj6ty"]
 
-[ext_resource type="Texture2D" uid="uid://tpxrb22wtmwv" path="res://Assets/Tilesets/TimeFantasy/TimeFantasy_FarmAndFort.png" id="1_nwsqi"]
+[ext_resource type="Texture2D" uid="uid://tpxrb22wtmwv" path="res://Assets/Graphics/Tilesets/TimeFantasy/TimeFantasy_FarmAndFort.png" id="1_nwsqi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dp505"]
 texture = ExtResource("1_nwsqi")

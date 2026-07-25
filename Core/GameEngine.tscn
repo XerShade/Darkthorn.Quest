@@ -1,11 +1,16 @@
 [gd_scene format=3 uid="uid://bq2j1tmlmksiu"]
 
 [ext_resource type="Script" uid="uid://35kfcmsrcu8g" path="res://Core/GameEngine.cs" id="1_5mrh5"]
+[ext_resource type="PackedScene" uid="uid://okddx4mji1vg" path="res://Nodes/Player/Player.tscn" id="2_5w7nr"]
 [ext_resource type="PackedScene" uid="uid://b61kit8j45un1" path="res://Scenes/Levels/PlayerBase/PlayerBase.tscn" id="2_snqbx"]
 
 [node name="GameEngine" type="Node" unique_id=1152134858]
 script = ExtResource("1_5mrh5")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1283915538]
+
 [node name="Levels" type="Node" parent="." unique_id=1424087323]
 
 [node name="PlayerBase" parent="Levels" unique_id=710601367 instance=ExtResource("2_snqbx")]
+
+[node name="Player" parent="." unique_id=1634327682 instance=ExtResource("2_5w7nr")]

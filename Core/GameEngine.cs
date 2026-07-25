@@ -1,3 +1,4 @@
+using Darkthorn.Quest.Nodes.Player;
 using Godot;
 using System;
 
@@ -14,6 +15,11 @@ public partial class GameEngine : Node
     /// </summary>
 	public static GameEngine Instance { get; private set; }
 
+    /// <summary>
+    /// Gets the player node.
+    /// </summary>
+    public Player Player { get; private set; }
+
     /// <inheritdoc />
     public override void _EnterTree()
     {
@@ -29,6 +35,7 @@ public partial class GameEngine : Node
 
         // Assign the current instance to the static property.
         Instance = this;
+        this.Player = this.GetNode<Player>("Player");
     }
 
     /// <inheritdoc />
@@ -36,6 +43,10 @@ public partial class GameEngine : Node
     {
         // Invoke the base class implementation of _ExitTree.
         base._ExitTree();
+
+        // Dispose of the player node if it exists.
+        this.Player?.Dispose();
+        this.Player = null;
 
         // Dispose of the instance.
         Instance?.Dispose();

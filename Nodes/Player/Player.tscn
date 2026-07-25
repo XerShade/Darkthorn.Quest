@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://okddx4mji1vg"]
+
+[ext_resource type="Script" uid="uid://df6i67u1ohoec" path="res://Nodes/Player/Player.cs" id="1_6wfcp"]
+[ext_resource type="Texture2D" uid="uid://dx4k5rxk8cj3d" path="res://Assets/Graphics/Characters/TimeFantasy/chara1.png" id="2_wig6n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wccwa"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1634327682]
+script = ExtResource("1_6wfcp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1138716299]
+texture = ExtResource("2_wig6n")
+hframes = 12
+vframes = 8
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1365789054]
+position = Vector2(0, 8)
+shape = SubResource("CircleShape2D_wccwa")
