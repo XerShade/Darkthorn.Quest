@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b61kit8j45un1"]
+
+[ext_resource type="PackedScene" uid="uid://07gg42m2qpdy" path="res://Scenes/Levels/PlayerBase/PlayerBaseTilemap.tscn" id="1_gpw44"]
+
+[node name="PlayerBase" type="Node2D" unique_id=710601367]
+
+[node name="PlayerBaseTilemap" parent="." unique_id=478177888 instance=ExtResource("1_gpw44")]
