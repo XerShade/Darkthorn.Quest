@@ -19,5 +19,7 @@ public partial class Player : CharacterBody2D
 
 		this.Velocity = velocity.Normalized() * 128;
 		_ = this.MoveAndSlide();
+
+		GameEngine.Instance.Camera.Position = this.Position;
 	}
 }

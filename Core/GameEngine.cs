@@ -16,6 +16,10 @@ public partial class GameEngine : Node
 	public static GameEngine Instance { get; private set; }
 
     /// <summary>
+    /// Gets the camera node.
+    /// </summary>
+    public Camera2D Camera { get; private set; }
+    /// <summary>
     /// Gets the player node.
     /// </summary>
     public Player Player { get; private set; }
@@ -35,7 +39,10 @@ public partial class GameEngine : Node
 
         // Assign the current instance to the static property.
         Instance = this;
+
+        // Assign references to child nodes.
         this.Player = this.GetNode<Player>("Player");
+        this.Camera = this.GetNode<Camera2D>("Camera");
     }
 
     /// <inheritdoc />
@@ -43,6 +50,10 @@ public partial class GameEngine : Node
     {
         // Invoke the base class implementation of _ExitTree.
         base._ExitTree();
+
+        // Dispose of the camera node if it exists.
+        this.Camera?.Dispose();
+        this.Camera = null;
 
         // Dispose of the player node if it exists.
         this.Player?.Dispose();
