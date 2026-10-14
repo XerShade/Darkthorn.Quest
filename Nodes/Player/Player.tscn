@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://df6i67u1ohoec" path="res://Nodes/Player/Player.cs" id="1_6wfcp"]
 [ext_resource type="Texture2D" uid="uid://dx4k5rxk8cj3d" path="res://Assets/Graphics/Characters/TimeFantasy/chara1.png" id="2_wig6n"]
+[ext_resource type="Script" uid="uid://bhlbawmeggtle" path="res://Nodes/Components/Data/MovementData.cs" id="3_v5oc6"]
+[ext_resource type="Script" uid="uid://biunaxf2ma7ov" path="res://Nodes/Components/Systems/MovementSystem.cs" id="4_85684"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wccwa"]
 
@@ -17,3 +19,13 @@ frame = 1
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1365789054]
 position = Vector2(0, 8)
 shape = SubResource("CircleShape2D_wccwa")
+
+[node name="Data" type="Node" parent="." unique_id=955952376]
+
+[node name="MovementData" type="Node" parent="Data" unique_id=2029627655]
+script = ExtResource("3_v5oc6")
+
+[node name="Systems" type="Node" parent="." unique_id=1146047955]
+
+[node name="MovementSystem" type="Node" parent="Systems" unique_id=1518382793]
+script = ExtResource("4_85684")
